@@ -1,0 +1,50 @@
+HASHES:
+	md5
+		https://ru.wikipedia.org/wiki/MD5#:~:text=MD5%20%E2%80%94%20%D0%BE%D0%B4%D0%B8%D0%BD%20%D0%B8%D0%B7%20%D1%81%D0%B5%D1%80%D0%B8%D0%B8%20%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D0%BE%D0%B2,%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%20%D0%B2%20RFC%201321.
+		http://practicalcryptography.com/hashes/md5-hash/
+	sha2
+		https://ru.wikipedia.org/wiki/SHA-2
+		http://www.iwar.org.uk/comsec/resources/cipher/sha256-384-512.pdf
+
+CIPHERS:
+	des
+		https://ru.wikipedia.org/wiki/DES#:~:text=DES%20(%D0%B0%D0%BD%D0%B3%D0%BB.,%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%BC%2C%20%D0%B8%D0%BC%D0%B5%D1%8E%D1%89%D0%B8%D0%BC%20%D0%B4%D0%BB%D0%B8%D0%BD%D1%83%2056%20%D0%B1%D0%B8%D1%82.
+		https://www.ibm.com/support/knowledgecenter/linuxonibm/com.ibm.linux.z.wskc.doc/wskc_c_l0wskc57.html
+	des3
+		https://www.ibm.com/support/knowledgecenter/linuxonibm/com.ibm.linux.z.wskc.doc/wskc_c_algtdes.html
+		https://ru.wikipedia.org/wiki/Triple_DES#%D0%A8%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5_%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B1%D0%BB%D0%BE%D0%BA%D0%B0
+	kdf
+		https://www.openssl.org/docs/man1.0.2/man3/EVP_BytesToKey.html
+	pbkdf2
+		https://ru.wikipedia.org/wiki/PBKDF2
+	hmac
+	    https://ru.wikipedia.org/wiki/HMAC
+
+RSA:
+	rsa
+		https://ru.wikipedia.org/wiki/RSA#cite_note-:0-18
+		https://www.researchgate.net/publication/328718368_A_Performance_Analysis_of_DES_and_RSA_Cryptography
+		https://sahandsaba.com/cryptography-rsa-part-1.html
+	miller-rabin
+		https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82_%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80%D0%B0_%E2%80%94_%D0%A0%D0%B0%D0%B1%D0%B8%D0%BD%D0%B0
+		http://cryptowiki.net/index.php?title=%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B,_%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D0%BC%D1%8B%D0%B5_%D0%BF%D1%80%D0%B8_%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8_%D0%B0%D1%81%D0%B8%D0%BC%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D1%8B%D1%85_%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D1%81%D1%85%D0%B5%D0%BC#.D0.A2.D0.B5.D1.81.D1.82_.D0.9C.D0.B8.D0.BB.D0.BB.D0.B5.D1.80.D0.B0-.D0.A0.D0.B0.D0.B1.D0.B8.D0.BD.D0.B0_.28Miller-Rabin_test.29
+	keys
+		https://www.cem.me/20141221-cert-binaries.html
+		https://www.cem.me/20150104-cert-binaries-2.html
+	private key
+		https://crypto.stackexchange.com/questions/21102/what-is-the-ssl-private-key-file-format
+	public key
+		https://docs.microsoft.com/ru-ru/windows/win32/seccertenroll/about-sequence?redirectedfrom=MSDN
+	key formatting
+		https://tls.mbed.org/kb/cryptography/asn1-key-structures-in-der-and-pem
+	rsa-des
+		https://habr.com/ru/post/181320/
+	rsa pkcs
+		https://coderoad.ru/32470864/OpenSSL-%D1%80%D0%B0%D1%81%D1%88%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BE%D1%88%D0%B8%D0%B1%D0%BE%D0%BA-%D0%B7%D0%B0%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE-%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8E-%D1%81-Raw
+
+DSA:
+	dsa:
+		https://ru.wikipedia.org/wiki/DSA
+		https://ru.wikipedia.org/wiki/Digital_Signature_Standard
+	key:
+		https://docs.microsoft.com/ru-ru/windows/win32/seccertenroll/about-sequence?redirectedfrom=MSDN

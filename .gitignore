@@ -1,0 +1,8 @@
+# vscode
+.vscode
+
+# obj
+*.o
+
+# lib
+*.a
