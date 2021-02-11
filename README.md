@@ -1,9 +1,10 @@
 # ft_ssl
 ft_ssl is a C pet-project from 42 course written in order to know more about
 cryptography and security. Realized some [hashing](subjects/ft_ssl_md5.en.pdf),
-[cipher](subjects/ft_ssl_des.en.pdf) and [standard](subjects/ft_ssl_rsa.en.pdf),
+[cipher](subjects/ft_ssl_des.en.pdf) and [standard](subjects/ft_ssl_rsa.en.pdf)
 OPENSSL's commands. Its output is compatible with OPENSSL's one.
-RSA & DSA realized as 64-bit key long version.
+RSA & DSA realized as 64-bit long key version.
+RSA has a special command to break 64-bit long keys.
 
 ## Installation
 
