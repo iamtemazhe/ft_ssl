@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 04:27:19 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/09 12:09:12 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:33:33 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ void			gen_dsa(t_dsa *dsa)
 	construct_dsa_key(dsa);
 }
 
-static t_bool	flg_analise_value(t_ssl *ssl, t_dsa *dsa, t_dsa_flag f,
-									const char *arg)
+static t_bool	flg_analise_value(t_dsa *dsa, t_dsa_flag f, const char *arg)
 {
 	dsa->f.lag |= f.lag ^ SSL_FLG_HAS_VAL;
 	if ((arg = ft_getstrp(arg)) && !arg[0])
@@ -49,13 +48,13 @@ static void		flg_analise(t_ssl *ssl, t_dsa *dsa, int ac, char **av)
 
 	i = 1;
 	while (++i < ac && av[i][0] == '-')
-		if (!(f.lag = ssl_options(ssl, g_dsa_options, DSA_FLG_NUM, av[i])))
+		if (!(f.lag = ssl_options(g_dsa_options, DSA_FLG_NUM, av[i])))
 			ssl_err(ssl, av[i], INVALID_FLG);
 		else if (f.lg.h)
 			gendsa_help(ssl, dsa);
 		else if (!IS_FLG(f.lag, SSL_FLG_HAS_VAL))
 			dsa->f.lag |= f.lag;
-		else if (++i == ac || !flg_analise_value(ssl, dsa, f, av[i]))
+		else if (++i == ac || !flg_analise_value(dsa, f, av[i]))
 			ssl_err(ssl, &av[i - 1][1], MISSING_VALUE);
 	if (i < ac)
 		ssl_err(ssl, av[i], INVALID_ARG);
@@ -65,7 +64,7 @@ void			ssl_gendsa(t_ssl *ssl, int ac, char **av)
 {
 	t_dsa		dsa;
 
-	dsa_init(ssl, &dsa);
+	dsa_init(&dsa);
 	flg_analise(ssl, &dsa, ac, av);
 	(dsa.input) ? get_dsa_key(&dsa) : gen_dsa(&dsa);
 	dsa_print(&dsa);

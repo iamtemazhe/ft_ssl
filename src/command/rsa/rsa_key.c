@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 20:32:20 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/06 06:06:51 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:30:42 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,6 @@ static void		add_sequence(t_rsa *rsa, t_data **key, uint8_t sequence)
 
 void			construct_rsa_key(t_rsa *rsa)
 {
-	uint8_t		cbyte;
-	uint32_t	bytes_len;
-	t_data		*tmp;
-
 	if (rsa->key)
 		return ;
 	if (!(rsa->key = ft_datanew(3)))
@@ -103,9 +99,6 @@ void			construct_rsa_key(t_rsa *rsa)
 void			construct_rsa_pkey(t_rsa *rsa)
 {
 	uint8_t		null_byte;
-	uint8_t		cbyte;
-	uint32_t	bytes_len;
-	t_data		*tmp;
 
 	if (rsa->pkey)
 		return ;

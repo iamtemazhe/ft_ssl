@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 23:08:56 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/06 06:45:21 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:28:03 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ char			ssl_flag(t_ssl *ssl, const char *flags, char *arg)
 	return (FAILURE);
 }
 
-uint32_t		ssl_options(t_ssl *ssl, const t_ssl_option *options,\
+uint32_t		ssl_options(const t_ssl_option *options,\
 								size_t options_num, char *arg)
 {
-	int8_t		i;
+	size_t		i;
 	uint32_t	flag;
 	char		*flg_arg;
 

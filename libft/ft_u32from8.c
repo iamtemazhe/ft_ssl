@@ -6,13 +6,13 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 01:49:37 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/01/31 16:26:19 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 12:37:07 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-uint32_t		ft_u32pad8(const uint8_t *src, uint8_t n, uint8_t pad)
+uint32_t		ft_u32pad8(const uint8_t *src, size_t n, uint8_t pad)
 {
 	uint8_t		i;
 	uint32_t	dst;
@@ -27,7 +27,7 @@ uint32_t		ft_u32pad8(const uint8_t *src, uint8_t n, uint8_t pad)
 	return (dst);
 }
 
-uint32_t		ft_u32from8(const uint8_t *src, uint8_t n)
+uint32_t		ft_u32from8(const uint8_t *src, size_t n)
 {
 	return (ft_u32pad8(src, n, 0));
 }

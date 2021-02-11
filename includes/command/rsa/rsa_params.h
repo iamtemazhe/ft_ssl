@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 02:19:17 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/08 04:23:37 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:30:15 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static const t_data			g_rsa_pkey_sequence = {
 
 static const t_data			g_rsa_ptype = {
 	.file_name = "process type",
-	.data = _RSA_PROC_TYPE,
+	.data = (uint8_t *)_RSA_PROC_TYPE,
 	.n = _RSA_PROC_TYPE_LEN
 };
 #endif

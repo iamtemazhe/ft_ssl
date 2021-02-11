@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 11:07:10 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/09 13:11:50 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:31:52 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ static t_data	*get_cipher_key(t_cipdata *cipdata, t_bool decrypt_mode)
 
 static void		rsa_cipher_decrypt(t_rsa *rsa, t_data **p_key, t_data *key)
 {
-	if (!fill_cipher_params(rsa->ciphers,\
-		get_cipher_name(rsa->ciphers, key->data, ','), &rsa->cipdata_in))
+	if (!fill_cipher_params(rsa->ciphers, get_cipher_name(rsa->ciphers,\
+		(char *)key->data, ','),&rsa->cipdata_in))
 		rsa_out(rsa, ft_tprintf(STDERR, ERR, "Unsupported encryption\n"));
 	key->data += ft_strlen(rsa->cipdata_in.params->name) + 1;
-	if (!(rsa->cipdata_in.salt = get_data_from_hex_string(key->data,\
+	if (!(rsa->cipdata_in.salt = get_data_from_hex_string((char *)key->data,\
 								"Salt", CIPHER_SALT_LEN)))
 		rsa_out(rsa, FAILURE);
 	key->data += CIPHER_SALT_LEN * 2 + 2;

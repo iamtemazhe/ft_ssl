@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 13:25:51 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/08 07:34:41 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 12:37:12 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -227,8 +227,8 @@ int					ft_strnequ(const char *s1, const char *s2, size_t n);
 
 unsigned int		ft_abs(int a);
 uint32_t			ft_swapint32(uint32_t x);
-uint32_t			ft_u32from8(const uint8_t *src, uint8_t n);
-uint32_t			ft_u32pad8(const uint8_t *src, uint8_t n, uint8_t pad);
+uint32_t			ft_u32from8(const uint8_t *src, size_t n);
+uint32_t			ft_u32pad8(const uint8_t *src, size_t n, uint8_t pad);
 
 long long			ft_max(long long a, long long b);
 long long			ft_max3(long long a, long long b, long long c);
@@ -240,9 +240,9 @@ int64_t				ft_filesize(int fd);
 
 uint64_t			ft_lsqrt(uint64_t n);
 uint64_t			ft_swapint64(uint64_t x);
-uint64_t			ft_ufrom8(const uint8_t *src, uint8_t n);
-uint64_t			ft_u64from8(const uint8_t *src, uint8_t n);
-uint64_t			ft_u64pad8(const uint8_t *src, uint8_t n, uint8_t pad);
+uint64_t			ft_ufrom8(const uint8_t *src, size_t n);
+uint64_t			ft_u64from8(const uint8_t *src, size_t n);
+uint64_t			ft_u64pad8(const uint8_t *src, size_t n, uint8_t pad);
 uint64_t			ft_rand(uint64_t lower, uint64_t upper);
 uint64_t			ft_rand_prime(uint64_t lower, uint64_t upper,\
 									uint8_t bits, uint32_t k);

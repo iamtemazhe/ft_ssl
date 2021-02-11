@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 11:07:10 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/09 11:42:34 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:29:34 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 static void			rsa_print_key(t_rsa *rsa, const t_data *key,\
 								const t_data *sline, const t_data *eline)
 {
-	t_data			*cip;
-
 	if (rsa->f.lg.n)
 		return ;
 	if (rsa->input)

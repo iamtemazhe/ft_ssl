@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 07:21:24 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/09 11:27:04 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:28:23 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void			gen_rsa(t_rsa *rsa)
 	construct_rsa_key(rsa);
 }
 
-static t_bool	flg_analise_value(t_ssl *ssl, t_rsa *rsa, t_rsa_flag f,
+static t_bool	flg_analise_value(t_rsa *rsa, t_rsa_flag f,
 									const char *arg)
 {
 	rsa->f.lag |= f.lag ^ SSL_FLG_HAS_VAL;
@@ -57,14 +57,14 @@ static void		flg_analise(t_ssl *ssl, t_rsa *rsa, int ac, char **av)
 
 	i = 1;
 	while (++i < ac && av[i][0] == '-')
-		if (!(f.lag = ssl_options(ssl, g_genrsa_options,\
+		if (!(f.lag = ssl_options(g_genrsa_options,\
 									GENRSA_FLG_NUM, av[i])))
 			ssl_err(ssl, av[i], INVALID_FLG);
 		else if (f.lg.h)
 			genrsa_help(ssl, rsa);
 		else if (!IS_FLG(f.lag, SSL_FLG_HAS_VAL))
 			rsa->f.lag |= f.lag;
-		else if (++i == ac || !flg_analise_value(ssl, rsa, f, av[i]))
+		else if (++i == ac || !flg_analise_value(rsa, f, av[i]))
 			ssl_err(ssl, &av[i - 1][1], MISSING_VALUE);
 	if (i < ac)
 		ssl_err(ssl, av[i], INVALID_ARG);

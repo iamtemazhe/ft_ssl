@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 22:04:36 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/07 14:03:32 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:27:26 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void			flg_analise(t_ssl *ssl, t_rsa *rsa, int ac, char **av)
 
 	i = 1;
 	while (++i < ac && av[i][0] == '-')
-		if (!(f.lag = ssl_options(ssl, g_rsautl_options,\
+		if (!(f.lag = ssl_options(g_rsautl_options,\
 													RSAUTL_FLG_NUM, av[i])))
 			ssl_err(ssl, av[i], INVALID_FLG);
 		else if (f.lg.h)

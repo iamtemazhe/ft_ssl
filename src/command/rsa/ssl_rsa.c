@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 22:04:36 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/07 10:14:15 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:27:22 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void		flg_analise(t_ssl *ssl, t_rsa *rsa, int ac, char **av)
 	while (++i < ac && av[i][0] == '-')
 		if (fill_cipher_params(rsa->ciphers, &av[i][1], &rsa->cipdata_out))
 			continue ;
-		else if (!(f.lag = ssl_options(ssl, g_rsa_options, RSA_FLG_NUM, av[i])))
+		else if (!(f.lag = ssl_options(g_rsa_options, RSA_FLG_NUM, av[i])))
 			ssl_err(ssl, av[i], INVALID_FLG);
 		else if (f.lg.h)
 			rsa_help(ssl, rsa);

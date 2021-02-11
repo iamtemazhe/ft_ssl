@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 11:07:10 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/07 22:30:34 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:28:51 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void			get_rsa32prime(t_rsa *rsa, uint64_t *num, t_bool is_second)
 {
 	uint8_t		k;
 
+	k = 0;
 	while (TRUE)
 		if (k == RSA_PRIME_K)
 			break ;
@@ -48,6 +49,7 @@ t_bool			get_rsa32prime_n(t_rsa *rsa, uint64_t *num, t_bool is_second)
 	uint8_t		k;
 
 	c = 0;
+	k = 0;
 	ft_fprintf(STDERR, "num = %zu\n", *num);
 	while (TRUE)
 	{

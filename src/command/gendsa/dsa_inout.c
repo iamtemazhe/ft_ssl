@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 06:31:15 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/08 10:38:47 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:33:22 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void			dsa_out(t_dsa *dsa, int prnt)
 	exit((prnt) ? FAILURE : SUCCESS);
 }
 
-void			dsa_init(t_ssl *ssl, t_dsa *dsa)
+void			dsa_init(t_dsa *dsa)
 {
 	dsa->f.lag = 0;
 	dsa->fd = STDOUT;

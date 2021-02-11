@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 08:01:39 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/08 10:37:35 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:33:47 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,6 @@ static void		add_sequence(t_dsa *dsa, t_data **key, uint8_t sequence)
 
 void			construct_dsa_key(t_dsa *dsa)
 {
-	uint8_t		cbyte;
-	uint32_t	bytes_len;
-	t_data		*tmp;
-
 	if (dsa->key)
 		return ;
 	if (!(dsa->key = ft_datanew(3)))

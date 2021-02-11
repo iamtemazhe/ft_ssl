@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 16:19:11 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/01 23:51:38 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:27:06 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 void					ssl_info(t_ssl *ssl, uint8_t flg, int exit_code);
 void					ssl_err(t_ssl *ssl, const char *arg, int8_t err_code);
 void					ssl_out(t_ssl *ssl, int prnt);
-uint32_t				ssl_options(t_ssl *ssl, const t_ssl_option *options,\
+uint32_t				ssl_options(const t_ssl_option *options,\
 									size_t options_num, char *arg);
 
 char					ssl_flag(t_ssl *ssl, const char *flags, char *arg);

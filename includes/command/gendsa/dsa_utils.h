@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 04:48:06 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/09 11:08:49 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:33:29 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "dsa_const.h"
 # include "hash.h"
 
-void				dsa_init(t_ssl *ssl, t_dsa *dsa);
+void				dsa_init(t_dsa *dsa);
 void				dsa_out(t_dsa *dsa, int prnt);
 void				dsa_print(t_dsa *dsa);
 void				gendsa_help(t_ssl *ssl, t_dsa *dsa);

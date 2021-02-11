@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/01 22:04:36 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/08 01:52:47 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:32:52 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,7 @@ t_data				*rsa_crypt(const void *data, size_t n,\
 	return (outdata);
 }
 
-t_data				*rsa_clear_msg(t_rsa *rsa, t_data **msg,\
-									t_bool decrypt_mode)
+t_data				*rsa_clear_msg(t_data **msg, t_bool decrypt_mode)
 {
 	size_t			i;
 	t_data			*tmp;
@@ -100,7 +99,7 @@ t_data				*rsa_clear_outdata(t_rsa *rsa, t_data **outdata,\
 	tmp = NULL;
 	if (!(outdata && *outdata && decrypt_mode))
 		return (*outdata);
-	pad_n = (size_t)(ft_strchr((*outdata)->data + RSA_PKSC_SLEN, 0) -\
+	pad_n = (size_t)(ft_strchr((char *)(*outdata)->data + RSA_PKSC_SLEN, 0) -\
 									(char *)(*outdata)->data) + RSA_PKSC_ELEN;
 	if ((*outdata)->n % RSA_BYTES || (*outdata)->data[0] ||\
 		(*outdata)->data[1] != RSA_PKSC1T2 || (*outdata)->n == (pad_n - 1))
@@ -117,10 +116,9 @@ t_data				*rsa_clear_outdata(t_rsa *rsa, t_data **outdata,\
 
 void				rsa_it(t_rsa *rsa, t_data *msg, t_bool decrypt_mode)
 {
-	t_data			*tmp;
 	t_data			*outdata;
 
-	if (!(msg = rsa_clear_msg(rsa, &msg, decrypt_mode)))
+	if (!(msg = rsa_clear_msg(&msg, decrypt_mode)))
 		rsa_out(rsa, FAILURE);
 	outdata = rsa_crypt(msg->data, msg->n, rsa->n,\
 							(decrypt_mode) ? rsa->d : rsa->e);

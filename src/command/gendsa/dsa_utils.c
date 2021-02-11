@@ -6,7 +6,7 @@
 /*   By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 08:02:13 by jwinthei          #+#    #+#             */
-/*   Updated: 2021/02/08 09:40:08 by jwinthei         ###   ########.fr       */
+/*   Updated: 2021/02/11 11:33:41 by jwinthei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void			get_dsa64prime(t_dsa *dsa, uint64_t *num,\
 {
 	uint8_t		k;
 
+	k = 0;
 	while (TRUE)
 		if (k == DSA_PRIME_K)
 			break ;

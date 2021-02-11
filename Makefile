@@ -6,7 +6,7 @@
 #    By: jwinthei <jwinthei@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/15 17:33:40 by jwinthei          #+#    #+#              #
-#    Updated: 2021/02/09 12:10:46 by jwinthei         ###   ########.fr        #
+#    Updated: 2021/02/11 11:26:31 by jwinthei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,7 @@ SSL_O = 	$(SSL_C:.c=.o)
 LIB_O = 	$(LIB_C:.c=.o)
 
 FLG	=		-Wall -Wextra -Werror
-FLG	=		-Wno-unused-result
+FLG	+=		-Wno-unused-result
 MATH_LIB = 	-lm
 CFLAGS =	-O3 $(FLG) $(MATH_LIB) -I $(INC_LIB)\
 			-I $(INC_D) -I $(INC_TYPES)\
