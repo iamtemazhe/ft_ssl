@@ -22,6 +22,11 @@ make
 ./ft_ssl des3 -e -i plain.txt -o crypto.txt -p SuperSecurePassword
 ./ft_ssl genrsa
 ```
+For detail information use:
+```bash
+
+./ft_ssl command -h
+```
 
 ## Available commands
 
